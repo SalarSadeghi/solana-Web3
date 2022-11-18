@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img class="logo-img" src="assets/images/solana-logo.png" alt="Solana Logo">
+            </div>
+            <div class="page-title">
+                <h1>Solana Web3 Interaction</h1>
+                <h3>Solana is a decentralized, secure and fast protocol on blockchain which can perform <br>
+                    any transaction through eight technological innovations. This project interacts with <br>
+                    Solana network and reads data from the chain.   
+                </h3>
+                <div class="page-title-btn"><a target="_blank" href="http://docs.solana.com/introduction">Learn about</a></div>
+            </div>
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="container">
+            <div class="main-box">
+                <form >
+                    <label for="publickey">Public Key</label>
+                    <input type="text" name="publickey" id="publickey" placeholder="Enter publickey" size="44" required>
+                    <button type="submit" id="check-balance-btn" onclick="getBalanceOf(event)">Check Balance</button>
+                    <button type="submit" id="airdrop-btn" onclick="getAirdrop(event)">Airdrop</button>
+                 </form>
+                 <p class="account-address" id="account-address">Account Address</p>
+                 <p class="balance-value" id="balance-value">Current Balance</p>
+                 <p id="signature">Signature</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
